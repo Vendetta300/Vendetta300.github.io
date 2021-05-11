@@ -1,0 +1,1220 @@
+
+body 
+{
+  margin: 0;
+  padding: 0;
+  font-family: Calibri;
+  display:table;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+header 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 120px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #000000;
+  font-size: 20px;
+}
+
+header .logo 
+{
+  padding-top: 0px;
+  color: #fff;
+  height: 55px;
+  line-height: 50px;
+  font-size: 50px;
+  float: left;
+  font-weight: bold;
+   z-index: 9999;
+
+}
+
+header nav 
+{
+  float: right;
+  
+}
+
+header nav ul 
+{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li 
+{
+  list-style: none;
+  position: relative;
+}
+
+header nav ul li.sub-menu:before 
+{
+  content: '\f078';
+  font-family: fontAwesome;
+  position: absolute;
+  line-height: 50px;
+  color: #fff;
+  right: 1px;
+}
+
+header nav ul li.active.sub-menu:before 
+{
+  content: '\f077';
+}
+
+header nav ul li ul 
+{
+  position: absolute;
+  left: 0;
+  background: #333;
+  display: none
+}
+
+header nav ul li.active ul 
+{
+  /* use li: hover instead */
+  display: block;
+}
+
+header nav ul li ul li 
+{
+  display: block;
+  width: 200px;
+}
+
+header nav ul li a 
+{
+  height: 55px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+header nav ul li a:hover 
+{
+  color: #fff;
+  background: #00802b;
+}
+
+header nav ul li a.active 
+{
+  background: #000;
+}
+
+.menu-toggle 
+{
+  color: #fff;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none
+}
+
+@media (max-width: 1000px) 
+{
+  header {
+    padding: 0 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  header nav 
+  {
+    /* use display none or left:-100% to hide the nav  */
+    /* display: none; */
+    position: absolute;
+    top: 55px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #333;
+    transition: 0.5s;
+  }
+  header nav.active 
+  {
+    left: 0;
+  }
+  header nav ul 
+  {
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a 
+  {
+    border-bottom: 0.9px solid rgba(0, 0, 0, .2);
+  }
+  header nav ul li.active ul 
+  {
+    position: relative;
+    background: #666666;
+  }
+  header nav ul li ul li 
+  {
+    width: 100%;
+  }
+}
+
+
+footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+
+/******************* GALERIJA *********************************/
+div.gallery 
+{
+    border: 5px solid #000;
+}
+
+div.gallery:hover 
+{
+    border: 5px solid #00802b;
+}
+
+div.gallery img 
+{
+    width: 100%;
+    height: auto;
+}
+
+div.desc 
+{
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive 
+{
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 900px) 
+{
+    .responsive {
+        width: 50%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) 
+{
+    .responsive {
+        width: 100%;
+    }
+}
+.clearfix:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+/******************************* MODAL VIEW I SLIDE SHOW ***********************************/
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal3 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal4 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal5 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal6 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal7 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal8 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal9 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal10 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal11 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal12 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal13 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal14 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal15 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal16 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal17 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal18 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal19 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal20 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal21 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal22 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal23 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal24 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal25 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal26 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal27 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal28 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal29 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+
+.close1 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close2 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close3 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close4 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close4:hover,
+.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close5 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close5:hover,
+.close5:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close6 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close6:hover,
+.close6:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close7 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close7:hover,
+.close7:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close8 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close8:hover,
+.close8:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close9 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close9:hover,
+.close9:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close10 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close10:hover,
+.close10:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close11 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close11:hover,
+.close11:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close12 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close12:hover,
+.close12:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close13 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close13:hover,
+.close13:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close14 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close14:hover,
+.close14:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close15 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close15:hover,
+.close15:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close16 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close16:hover,
+.close16:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close17 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close17:hover,
+.close17:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close18 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close18:hover,
+.close18:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close19 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close19:hover,
+.close19:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close20 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close20:hover,
+.close20:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close21 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close21:hover,
+.close21:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close22 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close22:hover,
+.close22:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close23 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close23:hover,
+.close23:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close24 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close24:hover,
+.close24:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close25 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close25:hover,
+.close25:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close26 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close26:hover,
+.close26:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close27 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close27:hover,
+.close27:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close28 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close28:hover,
+.close28:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close29 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close29:hover,
+.close29:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: white;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides1 {
+  display: none;
+}
+.mySlides2 {
+  display: none;
+}
+.mySlides3 {
+  display: none;
+}
+.mySlides4 {
+  display: none;
+}
+.mySlides5 {
+  display: none;
+}
+.mySlides6 {
+  display: none;
+}
+.mySlides7 {
+  display: none;
+}
+.mySlides8 {
+  display: none;
+}
+.mySlides9 {
+  display: none;
+}
+.mySlides10 {
+  display: none;
+}
+.mySlides11 {
+  display: none;
+}
+.mySlides12 {
+  display: none;
+}
+.mySlides13 {
+  display: none;
+}
+.mySlides14 {
+  display: none;
+}
+.mySlides15 {
+  display: none;
+}
+.mySlides16 {
+  display: none;
+}
+.mySlides17 {
+  display: none;
+}
+.mySlides18 {
+  display: none;
+}
+.mySlides19 {
+  display: none;
+}
+.mySlides20 {
+  display: none;
+}
+.mySlides21 {
+  display: none;
+}
+.mySlides22 {
+  display: none;
+}
+.mySlides23 {
+  display: none;
+}
+.mySlides24 {
+  display: none;
+}
+.mySlides25 {
+  display: none;
+}
+.mySlides26 {
+  display: none;
+}
+.mySlides27 {
+  display: none;
+}
+.mySlides28 {
+  display: none;
+}
+.mySlides29 {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+

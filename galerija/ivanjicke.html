@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset = "utf-8">
+		<title>Galerija/Ivanjičke</title>
+		<link rel="stylesheet" type="text/css" href = "style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="img/Logo.jpeg" type="image/gif" sizes="16x16">
+		
+	</head>
+	<header>
+      <div class="logo">
+        <img src="img/Logo.jpeg" height="46" width="110">
+        </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">POČETNA</a></li>
+          <li><a href="../onama.html">O NAMA</a></li>
+		  <li><a href="../tehnickiopis.html">TEHNIČKI OPIS</a></li>
+          <li class="sub-menu"><a href="#">GALERIJA </a>
+            <ul>
+              <li><a href="brvnare.html">BRVNARE</a></li>
+              <li><a href="ivanjicke.html">IVANJIČKE</a></li>
+			  <li><a href="lux.html">LUX</a></li>
+			  <li><a href="standard.html">STANDARD</a></li>
+             
+            </ul>
+          </li>
+		  <li><a href="../kontakt.html">KONTAKT</a></li>
+        </ul>
+      </nav>
+	  
+      <div class="menu-toggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </header>
+	<body>
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(
+				function() {
+					$('.menu-toggle').click(function() {
+					$('nav').toggleClass('active')
+					})
+
+					$('ul li').click(function() {
+					$(this).siblings().removeClass('active');
+					$(this).toggleClass('active');
+					})
+				}
+			)
+		</script>
+    
+	<!------------------------1----------------------------->
+	<br><br><br>
+	<h1 align="center">IVANJIČKE</h1>
+	<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip35/35m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 35m2 <br>
+	<button class="button" id="myBtn11">POGLEDAJ</button>
+   </div>
+  </div>
+  </div>
+	
+
+<div id="myModal11" class="modal11">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close11">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides11">
+    <div class="numbertext">1 / 3</div>
+    <img src="Kuće/Ivanjicke/tip35/35m2s.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides11">
+    <div class="numbertext">2 / 3</div>
+    <img src="Kuće/Ivanjicke/tip35/35m2c.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides11">
+    <div class="numbertext">3 / 3</div>
+    <img src="Kuće/Ivanjicke/tip35/35m2p.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidesq(-1)">❮</a>
+  <a class="next" onclick="plusSlidesq(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip35/35m2s.jpeg" style="width:100%" onclick="currentSlideq(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip35/35m2c.jpeg" style="width:100%" onclick="currentSlideq(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip35/35m2p.jpeg" style="width:100%" onclick="currentSlideq(3)">
+    </div>  
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal11 = document.getElementById("myModal11");
+
+// Get the button that opens the modal
+var btn11 = document.getElementById("myBtn11");
+
+// Get the <span> element that closes the modal
+var span11 = document.getElementsByClassName("close11")[0];
+
+// When the user clicks the button, open the modal 
+btn11.onclick = function() {
+  modal11.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span11.onclick = function() {
+  modal11.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal11) {
+    modal11.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexq = 1;
+showSlidesq(slideIndexq);
+
+function plusSlidesq(n) {
+  showSlidesq(slideIndexq += n);
+}
+
+function currentSlideq(n) {
+  showSlidesq(slideIndexq = n);
+}
+
+function showSlidesq(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides11");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexq = 1}
+  if (n < 1) {slideIndexq = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexq-1].style.display = "block";
+  dots[slideIndexq-1].className += " active";
+  captionText.innerHTML = dots[slideIndexq-1].alt;
+}
+
+</script>
+  <!------------------------2----------------------------->
+	<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip44/44m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 44m2 <br>
+	<button class="button" id="myBtn12">POGLEDAJ</button>
+   </div>
+  </div>
+  </div>
+	
+
+<div id="myModal12" class="modal12">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close12">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides12">
+    <div class="numbertext">1 / 4</div>
+    <img src="Kuće/Ivanjicke/tip44/44m2s.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides12">
+    <div class="numbertext">2 / 4</div>
+    <img src="Kuće/Ivanjicke/tip44/44m2-1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides12">
+    <div class="numbertext">3 / 4</div>
+    <img src="Kuće/Ivanjicke/tip44/44m2c.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides12">
+    <div class="numbertext">4 / 4</div>
+    <img src="Kuće/Ivanjicke/tip44/44m2p.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidesw(-1)">❮</a>
+  <a class="next" onclick="plusSlidesw(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip44/44m2s.jpeg" style="width:100%" onclick="currentSlidesw(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip44/44m2-1.jpeg" style="width:100%" onclick="currentSlidesw(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip44/44m2c.jpeg" style="width:100%" onclick="currentSlidesw(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip44/44m2p.jpeg" style="width:100%" onclick="currentSlidesw(4)">
+    </div>  
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal12 = document.getElementById("myModal12");
+
+// Get the button that opens the modal
+var btn12 = document.getElementById("myBtn12");
+
+// Get the <span> element that closes the modal
+var span12 = document.getElementsByClassName("close12")[0];
+
+// When the user clicks the button, open the modal 
+btn12.onclick = function() {
+  modal12.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span12.onclick = function() {
+  modal12.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal12) {
+    modal12.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexw = 1;
+showSlidesw(slideIndexw);
+
+function plusSlidesw(n) {
+  showSlidesw(slideIndexw += n);
+}
+
+function currentSlidesw(n) {
+  showSlidesw(slideIndexw = n);
+}
+
+function showSlidesw(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides12");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexw = 1}
+  if (n < 1) {slideIndexw = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexw-1].style.display = "block";
+  dots[slideIndexw-1].className += " active";
+  captionText.innerHTML = dots[slideIndexw-1].alt;
+}
+
+</script>
+  <!------------------------3----------------------------->
+  <div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip47/47m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 47m2 <br>
+	<button class="button" id="myBtn13">POGLEDAJ</button>
+   </div>
+  </div>
+  </div>
+	
+
+<div id="myModal13" class="modal13">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close13">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides13">
+    <div class="numbertext">1 / 4</div>
+    <img src="Kuće/Ivanjicke/tip47/47m2s.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides13">
+    <div class="numbertext">2 / 4</div>
+    <img src="Kuće/Ivanjicke/tip47/47m2-1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides13">
+    <div class="numbertext">3 / 4</div>
+    <img src="Kuće/Ivanjicke/tip47/47m2c.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides13">
+    <div class="numbertext">4 / 4</div>
+    <img src="Kuće/Ivanjicke/tip47/47m2p.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidese(-1)">❮</a>
+  <a class="next" onclick="plusSlidese(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip47/47m2s.jpeg" style="width:100%" onclick="currentSlidese(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip47/47m2-1.jpeg" style="width:100%" onclick="currentSlidese(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip47/47m2c.jpeg" style="width:100%" onclick="currentSlidese(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip47/47m2p.jpeg" style="width:100%" onclick="currentSlidese(4)">
+    </div>  
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal13 = document.getElementById("myModal13");
+
+// Get the button that opens the modal
+var btn13 = document.getElementById("myBtn13");
+
+// Get the <span> element that closes the modal
+var span13 = document.getElementsByClassName("close13")[0];
+
+// When the user clicks the button, open the modal 
+btn13.onclick = function() {
+  modal13.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span13.onclick = function() {
+  modal13.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal13) {
+    modal13.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexe = 1;
+showSlidese(slideIndexe);
+
+function plusSlidese(n) {
+  showSlidese(slideIndexe += n);
+}
+
+function currentSlidese(n) {
+  showSlidese(slideIndexe = n);
+}
+
+function showSlidese(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides13");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexe = 1}
+  if (n < 1) {slideIndexe = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexe-1].style.display = "block";
+  dots[slideIndexe-1].className += " active";
+  captionText.innerHTML = dots[slideIndexe-1].alt;
+}
+
+</script>
+  <!------------------------4----------------------------->
+
+<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip57/57m2.jpeg"  width="400" height="300">
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 57m2 <br>
+	<button class="button" id="myBtn14">POGLEDAJ</button>
+   </div>
+  </div>
+  <br>
+  </div>
+	
+
+<div id="myModal14" class="modal14">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close14">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides14">
+    <div class="numbertext">1 / 3</div>
+    <img src="Kuće/Ivanjicke/tip57/57m2s.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides14">
+    <div class="numbertext">2 / 3</div>
+    <img src="Kuće/Ivanjicke/tip57/57m2c.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides14">
+    <div class="numbertext">3 / 3</div>
+    <img src="Kuće/Ivanjicke/tip57/57m2p.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidesr(-1)">❮</a>
+  <a class="next" onclick="plusSlidesr(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip57/57m2s.jpeg" style="width:100%" onclick="currentSlidesr(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip57/57m2c.jpeg" style="width:100%" onclick="currentSlidesr(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip57/57m2p.jpeg" style="width:100%" onclick="currentSlidesr(3)">
+    </div>  
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal14 = document.getElementById("myModal14");
+
+// Get the button that opens the modal
+var btn14 = document.getElementById("myBtn14");
+
+// Get the <span> element that closes the modal
+var span14= document.getElementsByClassName("close14")[0];
+
+// When the user clicks the button, open the modal 
+btn14.onclick = function() {
+  modal14.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span14.onclick = function() {
+  modal14.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal14) {
+    modal14.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexr = 1;
+showSlidesr(slideIndexr);
+
+function plusSlidesr(n) {
+  showSlidesr(slideIndexr += n);
+}
+
+function currentSlidesr(n) {
+  showSlidesr(slideIndexr = n);
+}
+
+function showSlidesr(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides14");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexr = 1}
+  if (n < 1) {slideIndexr = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexr-1].style.display = "block";
+  dots[slideIndexr-1].className += " active";
+  captionText.innerHTML = dots[slideIndexr-1].alt;
+}
+
+</script>
+  <!------------------------5----------------------------->
+<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip59/59m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 59m2 <br>
+	<button class="button" id="myBtn15">POGLEDAJ</button>
+   </div>
+  </div>
+  </div>
+	
+
+<div id="myModal15" class="modal15">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close15">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides15">
+    <div class="numbertext">1 / 3</div>
+    <img src="Kuće/Ivanjicke/tip59/59m2s.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides15">
+    <div class="numbertext">2 / 3</div>
+    <img src="Kuće/Ivanjicke/tip59/59m2-1.jpeg" style="width:100%">
+  </div> 
+  <div class="mySlides15">
+    <div class="numbertext">3 / 3</div>
+    <img src="Kuće/Ivanjicke/tip59/59m2c.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides15">
+    <div class="numbertext">3 / 4</div>
+    <img src="Kuće/Ivanjicke/tip59/59m2p.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidest(-1)">❮</a>
+  <a class="next" onclick="plusSlidest(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip59/59m2s.jpeg" style="width:100%" onclick="currentSlidest(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip59/59m2-1.jpeg" style="width:100%" onclick="currentSlidest(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip59/59m2c.jpeg" style="width:100%" onclick="currentSlidest(3)">
+    </div> 
+<div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip59/59m2p.jpeg" style="width:100%" onclick="currentSlidest(4)">
+    </div> 	
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal15 = document.getElementById("myModal15");
+
+// Get the button that opens the modal
+var btn15 = document.getElementById("myBtn15");
+
+// Get the <span> element that closes the modal
+var span15= document.getElementsByClassName("close15")[0];
+
+// When the user clicks the button, open the modal 
+btn15.onclick = function() {
+  modal15.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span15.onclick = function() {
+  modal15.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal15) {
+    modal15.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndext = 1;
+showSlidest(slideIndext);
+
+function plusSlidest(n) {
+  showSlidest(slideIndext += n);
+}
+
+function currentSlidest(n) {
+  showSlidest(slideIndext = n);
+}
+
+function showSlidest(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides15");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndext = 1}
+  if (n < 1) {slideIndext = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndext-1].style.display = "block";
+  dots[slideIndext-1].className += " active";
+  captionText.innerHTML = dots[slideIndext-1].alt;
+}
+
+</script>
+  <!------------------------6----------------------------->
+<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip77/77m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 77m2 <br>
+	<button class="button" id="myBtn16">POGLEDAJ</button>
+   </div>
+  </div>
+  </div>
+	
+
+<div id="myModal16" class="modal16">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close16">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides16">
+    <div class="numbertext">1 / 4</div>
+    <img src="Kuće/Ivanjicke/tip77/77m2s.jpeg" style="width:100%">
+  </div>
+   <div class="mySlides16">
+    <div class="numbertext">2 / 4</div>
+    <img src="Kuće/Ivanjicke/tip77/77m2-1.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides16">
+    <div class="numbertext">3 / 4</div>
+    <img src="Kuće/Ivanjicke/tip77/77m2c.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides16">
+    <div class="numbertext">4 / 4</div>
+    <img src="Kuće/Ivanjicke/tip77/77m2p.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidesy(-1)">❮</a>
+  <a class="next" onclick="plusSlidesy(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip77/77m2s.jpeg" style="width:100%" onclick="currentSlidesy(1)">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip77/77m2-1.jpeg" style="width:100%" onclick="currentSlidesy(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip77/77m2c.jpeg" style="width:100%" onclick="currentSlidesy(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip77/77m2p.jpeg" style="width:100%" onclick="currentSlidesy(4)">
+    </div>  
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal16 = document.getElementById("myModal16");
+
+// Get the button that opens the modal
+var btn16 = document.getElementById("myBtn16");
+
+// Get the <span> element that closes the modal
+var span16= document.getElementsByClassName("close16")[0];
+
+// When the user clicks the button, open the modal 
+btn16.onclick = function() {
+  modal16.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span16.onclick = function() {
+  modal16.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal16) {
+    modal16.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexy = 1;
+showSlidesy(slideIndexy);
+
+function plusSlidesy(n) {
+  showSlidesy(slideIndexy += n);
+}
+
+function currentSlidesy(n) {
+  showSlidesy(slideIndexy = n);
+}
+
+function showSlidesy(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides16");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexy = 1}
+  if (n < 1) {slideIndexy = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexy-1].style.display = "block";
+  dots[slideIndexy-1].className += " active";
+  captionText.innerHTML = dots[slideIndexy-1].alt;
+}
+
+</script>
+<!------------------------7----------------------------->
+<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip81/81m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 81m2 <br>
+	<button class="button" id="myBtn17">POGLEDAJ</button>
+   </div>
+  </div>
+  </div>
+	
+
+<div id="myModal17" class="modal17">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close17">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides17">
+    <div class="numbertext">1 / 4</div>
+    <img src="Kuće/Ivanjicke/tip81/81m2s.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides17">
+    <div class="numbertext">2 / 4</div>
+    <img src="Kuće/Ivanjicke/tip81/81m2-1.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides17">
+    <div class="numbertext">3 / 4</div>
+    <img src="Kuće/Ivanjicke/tip81/81m2c.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides17">
+    <div class="numbertext">4 / 4</div>
+    <img src="Kuće/Ivanjicke/tip81/81m2p.jpeg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidesu(-1)">❮</a>
+  <a class="next" onclick="plusSlidesu(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip81/81m2s.jpeg" style="width:100%" onclick="currentSlidesu(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip81/81m2-1.jpeg" style="width:100%" onclick="currentSlidesu(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip81/81m2c.jpeg" style="width:100%" onclick="currentSlidesu(3)">
+    </div> 
+ <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip81/81m2p.jpeg" style="width:100%" onclick="currentSlidesu(4)">
+    </div>  	
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal17 = document.getElementById("myModal17");
+
+// Get the button that opens the modal
+var btn17 = document.getElementById("myBtn17");
+
+// Get the <span> element that closes the modal
+var span17= document.getElementsByClassName("close17")[0];
+
+// When the user clicks the button, open the modal 
+btn17.onclick = function() {
+  modal17.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span17.onclick = function() {
+  modal17.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal17) {
+    modal17.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexu = 1;
+showSlidesu(slideIndexu);
+
+function plusSlidesu(n) {
+  showSlidesu(slideIndexu += n);
+}
+
+function currentSlidesu(n) {
+  showSlidesu(slideIndexu = n);
+}
+
+function showSlidesu(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides17");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexu = 1}
+  if (n < 1) {slideIndexu = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexu-1].style.display = "block";
+  dots[slideIndexu-1].className += " active";
+  captionText.innerHTML = dots[slideIndexu-1].alt;
+}
+
+</script>
+
+<!------------------------8----------------------------->
+<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip90/90m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 90m2 <br>
+	<button class="button" id="myBtn18">POGLEDAJ</button>
+   </div>
+  </div>
+  <br>
+  </div>
+	
+
+<div id="myModal18" class="modal18">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close18">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides18">
+    <div class="numbertext">1 / 3</div>
+    <img src="Kuće/Ivanjicke/tip90/90m2s.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides18">
+    <div class="numbertext">2 / 3</div>
+    <img src="Kuće/Ivanjicke/tip90/90m2c.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides18">
+    <div class="numbertext">3 / 3</div>
+    <img src="Kuće/Ivanjicke/tip90/90m2p.jpg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidesi(-1)">❮</a>
+  <a class="next" onclick="plusSlidesi(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip90/90m2s.jpeg" style="width:100%" onclick="currentSlidesi(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip90/90m2c.jpeg" style="width:100%" onclick="currentSlidesi(2)">
+    </div> 
+ <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip90/90m2p.jpg" style="width:100%" onclick="currentSlidesi(3)">
+    </div>  	
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal18 = document.getElementById("myModal18");
+
+// Get the button that opens the modal
+var btn18 = document.getElementById("myBtn18");
+
+// Get the <span> element that closes the modal
+var span18= document.getElementsByClassName("close18")[0];
+
+// When the user clicks the button, open the modal 
+btn18.onclick = function() {
+  modal18.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span18.onclick = function() {
+  modal18.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal18) {
+    modal18.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexi = 1;
+showSlidesi(slideIndexi);
+
+function plusSlidesi(n) {
+  showSlidesi(slideIndexi += n);
+}
+
+function currentSlidesi(n) {
+  showSlidesi(slideIndexi = n);
+}
+
+function showSlidesi(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides18");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexi = 1}
+  if (n < 1) {slideIndexi = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexi-1].style.display = "block";
+  dots[slideIndexi-1].className += " active";
+  captionText.innerHTML = dots[slideIndexi-1].alt;
+}
+
+</script>
+<!------------------------9----------------------------->
+<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip101/101m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 100m2 <br>
+	<button class="button" id="myBtn19">POGLEDAJ</button>
+   </div>
+  </div>
+ 
+  </div>
+
+	
+
+<div id="myModal19" class="modal19">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close19">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides19">
+    <div class="numbertext">1 / 3</div>
+    <img src="Kuće/Ivanjicke/tip101/101m2s.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides19">
+    <div class="numbertext">2 / 3</div>
+    <img src="Kuće/Ivanjicke/tip101/101m2c.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides19">
+    <div class="numbertext">3 / 3</div>
+    <img src="Kuće/Ivanjicke/tip101/101m2p.jpg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlideso(-1)">❮</a>
+  <a class="next" onclick="plusSlideso(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip101/101m2s.jpeg" style="width:100%" onclick="currentSlideso(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip101/101m2c.jpeg" style="width:100%" onclick="currentSlideso(2)">
+    </div> 
+ <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip101/101m2p.jpg" style="width:100%" onclick="currentSlideso(3)">
+    </div>  	
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal19 = document.getElementById("myModal19");
+
+// Get the button that opens the modal
+var btn19 = document.getElementById("myBtn19");
+
+// Get the <span> element that closes the modal
+var span19= document.getElementsByClassName("close19")[0];
+
+// When the user clicks the button, open the modal 
+btn19.onclick = function() {
+  modal19.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span19.onclick = function() {
+  modal19.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal19) {
+    modal19.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexo = 1;
+showSlideso(slideIndexo);
+
+function plusSlideso(n) {
+  showSlideso(slideIndexo += n);
+}
+
+function currentSlideso(n) {
+  showSlideso(slideIndexo = n);
+}
+
+function showSlideso(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides19");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexo = 1}
+  if (n < 1) {slideIndexo = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexo-1].style.display = "block";
+  dots[slideIndexo-1].className += " active";
+  captionText.innerHTML = dots[slideIndexo-1].alt;
+}
+
+</script>
+
+<!------------------------10----------------------------->
+<div class="responsive">
+	<div class="gallery">
+    <img src="Kuće/Ivanjicke/tip117/117m2.jpeg"  width="400" height="300">
+  
+    <br>
+    <div class="desc"><b>TIP:</b> Ivanjičke<br>
+	<b>Površina:</b> 120m2 <br>
+	<button class="button" id="myBtn20">POGLEDAJ</button>
+   </div>
+  </div>
+  <br><br><br>
+  </div>
+
+<div id="myModal20" class="modal20">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close20">&times;</span>
+    </div>
+	<br><br>
+    <div class="container">
+  <div class="mySlides20">
+    <div class="numbertext">1 / 3</div>
+    <img src="Kuće/Ivanjicke/tip117/117m2s.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides20">
+    <div class="numbertext">2 / 3</div>
+    <img src="Kuće/Ivanjicke/tip117/117m2c.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides20">
+    <div class="numbertext">3 / 3</div>
+    <img src="Kuće/Ivanjicke/tip117/117m2p.jpg" style="width:100%">
+  </div>
+  
+  <a class="prev" onclick="plusSlidesp(-1)">❮</a>
+  <a class="next" onclick="plusSlidesp(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip117/117m2s.jpeg" style="width:100%" onclick="currentSlidesp(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip117/117m2c.jpeg" style="width:100%" onclick="currentSlidesp(2)">
+    </div> 
+ <div class="column">
+      <img class="demo cursor" src="Kuće/Ivanjicke/tip117/117m2p.jpg" style="width:100%" onclick="currentSlidesp(3)">
+    </div>  	
+  </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal20 = document.getElementById("myModal20");
+
+// Get the button that opens the modal
+var btn20 = document.getElementById("myBtn20");
+
+// Get the <span> element that closes the modal
+var span20= document.getElementsByClassName("close20")[0];
+
+// When the user clicks the button, open the modal 
+btn20.onclick = function() {
+  modal20.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span20.onclick = function() {
+  modal20.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal19) {
+    modal20.style.display = "none";
+  }
+}
+/****************************************************************************/
+var slideIndexp = 1;
+showSlidesp(slideIndexp);
+
+function plusSlidesp(n) {
+  showSlidesp(slideIndexp += n);
+}
+
+function currentSlidesp(n) {
+  showSlidesp(slideIndexp = n);
+}
+
+function showSlidesp(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides20");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndexp = 1}
+  if (n < 1) {slideIndexp = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexp-1].style.display = "block";
+  dots[slideIndexp-1].className += " active";
+  captionText.innerHTML = dots[slideIndexp-1].alt;
+}
+
+</script>
+	
+		</body>
+		<div class="footer">
+				<p>&#169;Company PIK Kuće. All rights reserved.</p>
+			</div>
+			<style>
+				.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				background-color: #000000;
+				color: white;
+				text-align: center;
+				font-family: Calibri;
+				font-size: 15px;
+				}
+			</style>	
+		</html>
